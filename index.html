@@ -547,7 +547,9 @@ function changeTimeframe(tf) {
 }
 
 function destroyChart() {
-  if (chartInstance) { chartInstance.destroy(); chartInstance = null; }
+  const existing = Chart.getChart('chartCanvas');
+  if (existing) { existing.destroy(); }
+  chartInstance = null;
 }
 
 function showChartLoading() { document.getElementById('chartLoading').style.display = 'flex'; }
