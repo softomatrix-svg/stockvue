@@ -1,0 +1,11 @@
+{
+  "buildCommand": null,
+  "functions": {
+    "api/index.py": {
+      "includeFiles": "index.html"
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index" }
+  ]
+}
